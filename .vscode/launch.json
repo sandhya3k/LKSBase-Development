@@ -1,0 +1,52 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Development",
+            "request": "launch",
+            "type": "al",
+            "environmentType": "Sandbox",
+            "environmentName": "Development",
+            "startupObjectId": 22,
+            "startupObjectType": "Page",
+            "breakOnError": true,
+            "launchBrowser": true,
+            "schemaUpdateMode": "Synchronize",
+            "tenant": "1b9aed15-8b31-41fd-ada7-a1de186519f2",
+            "server": "https://businesscentral.dynamics.com/",
+            "enableLongRunningSqlStatements": true,
+            "enableSqlInformationDebugger": true
+        },
+        {
+            "name": "UAT",
+            "request": "launch",
+            "type": "al",
+            "environmentType": "Sandbox",
+            "environmentName": "UAT",
+            "startupObjectId": 22,
+            "startupObjectType": "Page",
+            "breakOnError": true,
+            "launchBrowser": true,
+            "schemaUpdateMode": "Synchronize",
+            "tenant": "1b9aed15-8b31-41fd-ada7-a1de186519f2",
+            "server": "https://businesscentral.dynamics.com/",
+            "enableLongRunningSqlStatements": true,
+            "enableSqlInformationDebugger": true
+        }
+        // {
+        //     "name": "Webservice",
+        //     "request": "attach",
+        //     "type": "al",
+        //     "environmentType": "Sandbox",
+        //     "environmentName": "Development",
+          
+        //     "breakOnError": true,
+       
+        //     "tenant": "1b9aed15-8b31-41fd-ada7-a1de186519f2",
+        //     "server": "https://businesscentral.dynamics.com/",
+        //     "enableLongRunningSqlStatements": true,
+        //     "enableSqlInformationDebugger": true,
+        //     "breakOnNext": "WebServiceClient"
+        // }
+    ]
+}

@@ -1,0 +1,418 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <ReportItems>
+          <Tablix Name="Tablix1">
+            <TablixBody>
+              <TablixColumns>
+                <TablixColumn>
+                  <Width>1in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>1in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>1in</Width>
+                </TablixColumn>
+              </TablixColumns>
+              <TablixRows>
+                <TablixRow>
+                  <Height>0.25in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox1">
+                          <rd:DefaultName>Textbox1</rd:DefaultName>
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Sales Invoice Header No WO</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox3">
+                          <rd:DefaultName>Textbox3</rd:DefaultName>
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>CRNWO</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox5">
+                          <rd:DefaultName>Textbox5</rd:DefaultName>
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value />
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.25in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Sales_Invoice_Header__No__WO">
+                          <rd:DefaultName>Sales_Invoice_Header__No__WO</rd:DefaultName>
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!Sales_Invoice_Header__No__WO.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <rd:Selected>true</rd:Selected>
+                        <Textbox Name="CRNWO">
+                          <rd:DefaultName>CRNWO</rd:DefaultName>
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!CRNWO.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox6">
+                          <rd:DefaultName>Textbox6</rd:DefaultName>
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value />
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+              </TablixRows>
+            </TablixBody>
+            <TablixColumnHierarchy>
+              <TablixMembers>
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+              </TablixMembers>
+            </TablixColumnHierarchy>
+            <TablixRowHierarchy>
+              <TablixMembers>
+                <TablixMember>
+                  <KeepWithGroup>After</KeepWithGroup>
+                </TablixMember>
+                <TablixMember>
+                  <Group Name="Details" />
+                </TablixMember>
+              </TablixMembers>
+            </TablixRowHierarchy>
+            <DataSetName>DataSet_Result</DataSetName>
+            <Top>0.86333in</Top>
+            <Left>1.4675in</Left>
+            <Height>0.5in</Height>
+            <Width>3in</Width>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Tablix>
+        </ReportItems>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="CRNWO">
+          <DataField>CRNWO</DataField>
+        </Field>
+        <Field Name="CRNDateWO">
+          <DataField>CRNDateWO</DataField>
+        </Field>
+        <Field Name="Sales_Invoice_Header__No__WO">
+          <DataField>Sales_Invoice_Header__No__WO</DataField>
+        </Field>
+        <Field Name="Sales_Invoice_Header__Posting_Date_WO">
+          <DataField>Sales_Invoice_Header__Posting_Date_WO</DataField>
+        </Field>
+        <Field Name="Sales_Invoice_Header__Shortcut_Dimension_1_Code_WO">
+          <DataField>Sales_Invoice_Header__Shortcut_Dimension_1_Code_WO</DataField>
+        </Field>
+        <Field Name="Sales_Invoice_Header__Shortcut_Dimension_2_Code_WO">
+          <DataField>Sales_Invoice_Header__Shortcut_Dimension_2_Code_WO</DataField>
+        </Field>
+        <Field Name="Sales_Invoice_Header__Sales_Invoice_Header___Sell_to_Customer_Name_WO">
+          <DataField>Sales_Invoice_Header__Sales_Invoice_Header___Sell_to_Customer_Name_WO</DataField>
+        </Field>
+        <Field Name="OWNER1Writeoff">
+          <DataField>OWNER1Writeoff</DataField>
+        </Field>
+        <Field Name="OWNER2Writeoff">
+          <DataField>OWNER2Writeoff</DataField>
+        </Field>
+        <Field Name="ContactnameWO">
+          <DataField>ContactnameWO</DataField>
+        </Field>
+        <Field Name="CaseProcessWO">
+          <DataField>CaseProcessWO</DataField>
+        </Field>
+        <Field Name="CaseSolutionWO">
+          <DataField>CaseSolutionWO</DataField>
+        </Field>
+        <Field Name="CaseAreaWO">
+          <DataField>CaseAreaWO</DataField>
+        </Field>
+        <Field Name="CasePracticeWO">
+          <DataField>CasePracticeWO</DataField>
+        </Field>
+        <Field Name="GroupHeadWO">
+          <DataField>GroupHeadWO</DataField>
+        </Field>
+        <Field Name="GroupHeadNameWO">
+          <DataField>GroupHeadNameWO</DataField>
+        </Field>
+        <Field Name="CurrencyWO">
+          <DataField>CurrencyWO</DataField>
+        </Field>
+        <Field Name="BILLAMTWO">
+          <DataField>BILLAMTWO</DataField>
+        </Field>
+        <Field Name="BILLAMTWOFormat">
+          <DataField>BILLAMTWOFormat</DataField>
+        </Field>
+        <Field Name="BILLAMTLCYWO">
+          <DataField>BILLAMTLCYWO</DataField>
+        </Field>
+        <Field Name="BILLAMTLCYWOFormat">
+          <DataField>BILLAMTLCYWOFormat</DataField>
+        </Field>
+        <Field Name="Bill_DescWO">
+          <DataField>Bill_DescWO</DataField>
+        </Field>
+        <Field Name="BILLAMT_Control1000000026WO">
+          <DataField>BILLAMT_Control1000000026WO</DataField>
+        </Field>
+        <Field Name="BILLAMT_Control1000000026WOFormat">
+          <DataField>BILLAMT_Control1000000026WOFormat</DataField>
+        </Field>
+        <Field Name="BILLAMTLCY_Control1000000027WO">
+          <DataField>BILLAMTLCY_Control1000000027WO</DataField>
+        </Field>
+        <Field Name="BILLAMTLCY_Control1000000027WOFormat">
+          <DataField>BILLAMTLCY_Control1000000027WOFormat</DataField>
+        </Field>
+        <Field Name="BILLAMT_Control1000000023WO">
+          <DataField>BILLAMT_Control1000000023WO</DataField>
+        </Field>
+        <Field Name="BILLAMT_Control1000000023WOFormat">
+          <DataField>BILLAMT_Control1000000023WOFormat</DataField>
+        </Field>
+        <Field Name="BILLAMTLCY_Control1000000024WO">
+          <DataField>BILLAMTLCY_Control1000000024WO</DataField>
+        </Field>
+        <Field Name="BILLAMTLCY_Control1000000024WOFormat">
+          <DataField>BILLAMTLCY_Control1000000024WOFormat</DataField>
+        </Field>
+        <Field Name="STaxWO">
+          <DataField>STaxWO</DataField>
+        </Field>
+        <Field Name="STaxWOFormat">
+          <DataField>STaxWOFormat</DataField>
+        </Field>
+        <Field Name="ReimExpWO">
+          <DataField>ReimExpWO</DataField>
+        </Field>
+        <Field Name="ReimExpWOFormat">
+          <DataField>ReimExpWOFormat</DataField>
+        </Field>
+        <Field Name="NetBillAmtSIHWO">
+          <DataField>NetBillAmtSIHWO</DataField>
+        </Field>
+        <Field Name="NetBillAmtSIHWOFormat">
+          <DataField>NetBillAmtSIHWOFormat</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

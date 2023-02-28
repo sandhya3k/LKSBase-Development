@@ -1,0 +1,323 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="CompName">
+          <DataField>CompName</DataField>
+        </Field>
+        <Field Name="CompAdd">
+          <DataField>CompAdd</DataField>
+        </Field>
+        <Field Name="CompAdd2">
+          <DataField>CompAdd2</DataField>
+        </Field>
+        <Field Name="CompCity">
+          <DataField>CompCity</DataField>
+        </Field>
+        <Field Name="BankAccNo">
+          <DataField>BankAccNo</DataField>
+        </Field>
+        <Field Name="BankName">
+          <DataField>BankName</DataField>
+        </Field>
+        <Field Name="DateRange">
+          <DataField>DateRange</DataField>
+        </Field>
+        <Field Name="CloBalBank">
+          <DataField>CloBalBank</DataField>
+        </Field>
+        <Field Name="CloBalBankFormat">
+          <DataField>CloBalBankFormat</DataField>
+        </Field>
+        <Field Name="STRSUBSTNO___1_To__2___DateFrom__DateTo_">
+          <DataField>STRSUBSTNO___1_To__2___DateFrom__DateTo_</DataField>
+        </Field>
+        <Field Name="OpeningBalBank">
+          <DataField>OpeningBalBank</DataField>
+        </Field>
+        <Field Name="OpeningBalBankFormat">
+          <DataField>OpeningBalBankFormat</DataField>
+        </Field>
+        <Field Name="OpeninBalBook">
+          <DataField>OpeninBalBook</DataField>
+        </Field>
+        <Field Name="OpeninBalBookFormat">
+          <DataField>OpeninBalBookFormat</DataField>
+        </Field>
+        <Field Name="CloBalBook">
+          <DataField>CloBalBook</DataField>
+        </Field>
+        <Field Name="CloBalBookFormat">
+          <DataField>CloBalBookFormat</DataField>
+        </Field>
+        <Field Name="DateFrom">
+          <DataField>DateFrom</DataField>
+        </Field>
+        <Field Name="DateTo">
+          <DataField>DateTo</DataField>
+        </Field>
+        <Field Name="ReveEntry">
+          <DataField>ReveEntry</DataField>
+        </Field>
+        <Field Name="TextCrdr">
+          <DataField>TextCrdr</DataField>
+        </Field>
+        <Field Name="TextCrdr1">
+          <DataField>TextCrdr1</DataField>
+        </Field>
+        <Field Name="LocAdd">
+          <DataField>LocAdd</DataField>
+        </Field>
+        <Field Name="LocAdd2">
+          <DataField>LocAdd2</DataField>
+        </Field>
+        <Field Name="transactiondate">
+          <DataField>transactiondate</DataField>
+        </Field>
+        <Field Name="Descr">
+          <DataField>Descr</DataField>
+        </Field>
+        <Field Name="chqNo">
+          <DataField>chqNo</DataField>
+        </Field>
+        <Field Name="valDate">
+          <DataField>valDate</DataField>
+        </Field>
+        <Field Name="amttt">
+          <DataField>amttt</DataField>
+        </Field>
+        <Field Name="chqdptclrd">
+          <DataField>chqdptclrd</DataField>
+        </Field>
+        <Field Name="chqissnotclrd">
+          <DataField>chqissnotclrd</DataField>
+        </Field>
+        <Field Name="ShowTransaction">
+          <DataField>ShowTransaction</DataField>
+        </Field>
+        <Field Name="DocN">
+          <DataField>DocN</DataField>
+        </Field>
+        <Field Name="DebitPostDt">
+          <DataField>DebitPostDt</DataField>
+        </Field>
+        <Field Name="DebitDesc">
+          <DataField>DebitDesc</DataField>
+        </Field>
+        <Field Name="DebitChqNo">
+          <DataField>DebitChqNo</DataField>
+        </Field>
+        <Field Name="Reversed">
+          <DataField>Reversed</DataField>
+        </Field>
+        <Field Name="DebitAmt">
+          <DataField>DebitAmt</DataField>
+        </Field>
+        <Field Name="DebitAmtFormat">
+          <DataField>DebitAmtFormat</DataField>
+        </Field>
+        <Field Name="DebitEntryNo">
+          <DataField>DebitEntryNo</DataField>
+        </Field>
+        <Field Name="DebitAccNo">
+          <DataField>DebitAccNo</DataField>
+        </Field>
+        <Field Name="DebitDocNo">
+          <DataField>DebitDocNo</DataField>
+        </Field>
+        <Field Name="DrAmt">
+          <DataField>DrAmt</DataField>
+        </Field>
+        <Field Name="DrAmtFormat">
+          <DataField>DrAmtFormat</DataField>
+        </Field>
+        <Field Name="DrCheckNo">
+          <DataField>DrCheckNo</DataField>
+        </Field>
+        <Field Name="DrDesc">
+          <DataField>DrDesc</DataField>
+        </Field>
+        <Field Name="DrPostDate">
+          <DataField>DrPostDate</DataField>
+        </Field>
+        <Field Name="CreditPostDt">
+          <DataField>CreditPostDt</DataField>
+        </Field>
+        <Field Name="CreditAccNo">
+          <DataField>CreditAccNo</DataField>
+        </Field>
+        <Field Name="CreditEntryNo">
+          <DataField>CreditEntryNo</DataField>
+        </Field>
+        <Field Name="CreditDesc">
+          <DataField>CreditDesc</DataField>
+        </Field>
+        <Field Name="CreditChqNo">
+          <DataField>CreditChqNo</DataField>
+        </Field>
+        <Field Name="CreditDocNo">
+          <DataField>CreditDocNo</DataField>
+        </Field>
+        <Field Name="CreditAmt">
+          <DataField>CreditAmt</DataField>
+        </Field>
+        <Field Name="CreditAmtFormat">
+          <DataField>CreditAmtFormat</DataField>
+        </Field>
+        <Field Name="CrAmt">
+          <DataField>CrAmt</DataField>
+        </Field>
+        <Field Name="CrAmtFormat">
+          <DataField>CrAmtFormat</DataField>
+        </Field>
+        <Field Name="CrCheckNo">
+          <DataField>CrCheckNo</DataField>
+        </Field>
+        <Field Name="CrDesc">
+          <DataField>CrDesc</DataField>
+        </Field>
+        <Field Name="CrPostDate">
+          <DataField>CrPostDate</DataField>
+        </Field>
+        <Field Name="chqnotcleard">
+          <DataField>chqnotcleard</DataField>
+        </Field>
+        <Field Name="TransactionDateDr">
+          <DataField>TransactionDateDr</DataField>
+        </Field>
+        <Field Name="DocNoDr">
+          <DataField>DocNoDr</DataField>
+        </Field>
+        <Field Name="DescriptionDr">
+          <DataField>DescriptionDr</DataField>
+        </Field>
+        <Field Name="StatementAmountDr">
+          <DataField>StatementAmountDr</DataField>
+        </Field>
+        <Field Name="StatementAmountDrFormat">
+          <DataField>StatementAmountDrFormat</DataField>
+        </Field>
+        <Field Name="ValueDateDr">
+          <DataField>ValueDateDr</DataField>
+        </Field>
+        <Field Name="CheckNoDr">
+          <DataField>CheckNoDr</DataField>
+        </Field>
+        <Field Name="StatementNoDr">
+          <DataField>StatementNoDr</DataField>
+        </Field>
+        <Field Name="BankAcDr">
+          <DataField>BankAcDr</DataField>
+        </Field>
+        <Field Name="BankStmtLineDr">
+          <DataField>BankStmtLineDr</DataField>
+        </Field>
+        <Field Name="ab">
+          <DataField>ab</DataField>
+        </Field>
+        <Field Name="TransactionDateCr">
+          <DataField>TransactionDateCr</DataField>
+        </Field>
+        <Field Name="CrDoc">
+          <DataField>CrDoc</DataField>
+        </Field>
+        <Field Name="DescriptionCr">
+          <DataField>DescriptionCr</DataField>
+        </Field>
+        <Field Name="StatementAmountCr">
+          <DataField>StatementAmountCr</DataField>
+        </Field>
+        <Field Name="StatementAmountCrFormat">
+          <DataField>StatementAmountCrFormat</DataField>
+        </Field>
+        <Field Name="ValueDateCr">
+          <DataField>ValueDateCr</DataField>
+        </Field>
+        <Field Name="CheckNoCr">
+          <DataField>CheckNoCr</DataField>
+        </Field>
+        <Field Name="DocNoCr">
+          <DataField>DocNoCr</DataField>
+        </Field>
+        <Field Name="StatementNoCr">
+          <DataField>StatementNoCr</DataField>
+        </Field>
+        <Field Name="BankStmtLineCr">
+          <DataField>BankStmtLineCr</DataField>
+        </Field>
+        <Field Name="BankAcCr">
+          <DataField>BankAcCr</DataField>
+        </Field>
+        <Field Name="chqissclrd">
+          <DataField>chqissclrd</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

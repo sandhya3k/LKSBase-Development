@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="en-US" original="Please update this value">
+    <body>
+      <group id="body">
+        <trans-unit id="Codeunit 3236470475 - NamedType 2344539320" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Successfully inserted Contact No.</source>
+          <target>Successfully inserted Contact No.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ContactDataExchanger - NamedType Text0001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3236470475 - NamedType 2982235937" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Succesfully Dispatched</source>
+          <target>Succesfully Dispatched</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ContactDataExchanger - NamedType Text0002</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3236470475 - NamedType 3619932554" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Contact No. doesn't exists</source>
+          <target>Contact No. doesn't exists</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ContactDataExchanger - NamedType Text0003</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3236470475 - NamedType 4257629171" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Contact No. successfully modified</source>
+          <target>Contact No. successfully modified</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ContactDataExchanger - NamedType Text0004</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3236470475 - NamedType 600358492" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Successfully inserted Case No.</source>
+          <target>Successfully inserted Case No.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ContactDataExchanger - NamedType Text0005</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3236470475 - NamedType 1238055109" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Successfully inserted Branch No</source>
+          <target>Successfully inserted Branch No</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ContactDataExchanger - NamedType Text0006</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3236470475 - NamedType 1875751726" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Successfully inserted Advocate No</source>
+          <target>Successfully inserted Advocate No</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ContactDataExchanger - NamedType Text0007</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3236470475 - NamedType 2513448343" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Successfully inserted Customer No</source>
+          <target>Successfully inserted Customer No</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ContactDataExchanger - NamedType Text0008</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3236470475 - NamedType 3151144960" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Successfully inserted Forum</source>
+          <target>Successfully inserted Forum</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ContactDataExchanger - NamedType Text0009</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3236470475 - NamedType 914830240" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Successfully inserted Office No</source>
+          <target>Successfully inserted Office No</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ContactDataExchanger - NamedType Text0010</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 765338854 - NamedType 223055980" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Error When Contacting API</source>
+          <target>Error When Contacting API</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit E Invoice Generation - NamedType APIError</note>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

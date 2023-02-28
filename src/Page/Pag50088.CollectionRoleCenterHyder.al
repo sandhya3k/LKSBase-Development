@@ -1,0 +1,74 @@
+page 50088 "Collection Role Center-Hyder"
+{
+    ApplicationArea = All;
+    Caption = 'Collection Detail Role Center';
+    PageType = RoleCenter;
+
+    layout
+    {
+        area(rolecenter)
+        {
+            group("Collection Detail Role Center")
+            {
+                Caption = 'Collection Detail Role Center';
+                part("Customer List"; "Customer List")
+                {
+                    ApplicationArea = All;
+                    Caption = 'Customer List';
+                }
+            }
+        }
+    }
+
+    actions
+    {
+        area(embedding)
+        {
+            action("Expense Detail List")
+            {
+                ApplicationArea = All;
+                Caption = 'Expense Detail List';
+                RunObject = Page "Expense Detail List";
+            }
+            action("Collection Detail List")
+            {
+                ApplicationArea = All;
+                RunObject = Page "Collection Detail List";
+            }
+        }
+        area(reporting)
+        {
+            action("Deposit Slip other than HDFC ")
+            {
+                ApplicationArea = All;
+                Image = "Report";
+                RunObject = Report "DepositSlip HDFC<>HDFC-Hyd";
+            }
+            action("Deposit Slip to HDFC ")
+            {
+                ApplicationArea = All;
+                Image = "Report";
+                RunObject = Report "DepositSlip HDFC=HDFC-Hyd";
+            }
+            action("Deposit in Citi Bank or IOB")
+            {
+                ApplicationArea = All;
+                Image = "Report";
+                RunObject = Report "Deposit Slip CitiorIOB-Hyd";
+            }
+            action("Periodical collection Report")
+            {
+                ApplicationArea = All;
+                Image = "Report";
+                RunObject = Report "Periodical collection-Hyd";
+            }
+            action("Expense Pending")
+            {
+                ApplicationArea = All;
+                Image = "Report";
+                RunObject = Report "PendingExpensePosting-HYD";
+            }
+        }
+    }
+}
+
