@@ -78,9 +78,13 @@ codeunit 50007 "Event Subscriber"
         //TEAM:;1426
     end;
 
-
-
-
+    // >>#122
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Gen. Jnl.-Post Line", 'OnAfterInitVendLedgEntry', '', false, false)]
+    local procedure OnAfterInitVendLedgEntry(var VendorLedgerEntry: Record "Vendor Ledger Entry"; GenJournalLine: Record "Gen. Journal Line"; var GLRegister: Record "G/L Register")
+    begin
+        VendorLedgerEntry."Description 3" := GenJournalLine."Description 3 ";
+    end;
+    // <<#122
 
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Gen. Jnl.-Post Line", 'OnAfterFindAmtForAppln', '', false, false)]
     local procedure OnAfterFindAmtForAppln(VAR NewCVLedgEntryBuf: Record "CV Ledger Entry Buffer"; VAR OldCVLedgEntryBuf: Record "CV Ledger Entry Buffer"; VAR OldCVLedgEntryBuf2: Record "CV Ledger Entry Buffer"; VAR AppliedAmount: Decimal; VAR AppliedAmountLCY: Decimal; VAR OldAppliedAmount: Decimal)
@@ -332,6 +336,7 @@ codeunit 50007 "Event Subscriber"
             BankAccountLedgerEntry."Cheque No. 2" := GenJournalLine."Document No.";
             BankAccountLedgerEntry."Cheque Date" := GenJournalLine."Posting Date";
         end;
+        BankAccountLedgerEntry."Description 3" := GenJournalLine."Description 3 ";//#122
         /*if GLSetup."Activate Cheque No." then begin
             BankAccountLedgerEntry."Cheque No. 2" := GenJournalLine."Cheque No. 2";
             BankAccountLedgerEntry."Cheque Date" := GenJournalLine."Cheque Date";
@@ -360,6 +365,7 @@ codeunit 50007 "Event Subscriber"
             CheckLedgerEntry."Cheque No. 2" := BankAccountLedgerEntry."Cheque No. 2";
             CheckLedgerEntry."Check Date" := BankAccountLedgerEntry."Cheque Date";
         end;
+        CheckLedgerEntry."Description 3 " := BankAccountLedgerEntry."Description 3"; //#122
 
     end;
 

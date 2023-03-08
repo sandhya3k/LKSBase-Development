@@ -40,7 +40,7 @@ pageextension 50069 pageextension50069 extends "Contra Voucher"
             Visible = false;
         }
 
-        addafter("Account Name")
+        addafter("Currency Code")
         {
             field("Description 3"; Rec."Description 3 ")
             {

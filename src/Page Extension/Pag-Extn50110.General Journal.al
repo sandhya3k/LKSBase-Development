@@ -2,20 +2,13 @@ pageextension 50110 pageextension50110 extends "General Journal"
 {
     layout
     {
-        addafter("ShortcutDimCode8")
-        {
-            field("Group Head"; Rec."Group Head")
-            {
-                ApplicationArea = All;
-            }
-        }
         //#122
         modify(Description)
         {
             Visible = false;
         }
 
-        addafter("Account Name")
+        addafter("Document No.")
         {
             field("Description 3"; Rec."Description 3 ")
             {
@@ -24,6 +17,26 @@ pageextension 50110 pageextension50110 extends "General Journal"
             }
         }
         //#122
+        modify("Cheque No.")
+        {
+            Visible = false;
+        }
+        addbefore("Cheque Date")
+        {
+            field("Cheque No. 2"; Rec."Cheque No. 2")
+            {
+                Caption = 'Cheque No.';
+                ApplicationArea = all;
+            }
+
+        }
+        addafter("ShortcutDimCode8")
+        {
+            field("Group Head"; Rec."Group Head")
+            {
+                ApplicationArea = All;
+            }
+        }
     }
     actions
     {

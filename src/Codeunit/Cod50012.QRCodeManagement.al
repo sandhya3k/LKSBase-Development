@@ -37,6 +37,7 @@ codeunit 50012 "QR Code Management"
         ThreeTierMgt: Codeunit "File Management";
         Rec_ResEntry: Record "Reservation Entry";
         QRCodeText: Text;
+        QRGenerator: Codeunit "QR Generator";
 
 
     procedure CreateQRCodeforSalesInvoiceHeader(SalesInvoiceHeader: Record "Sales Invoice Header"; QRText: Text)
@@ -48,25 +49,40 @@ codeunit 50012 "QR Code Management"
         QRCodeFileName: Text[1024];
         Cust: Record Customer;
         SalesInvoiceHdrExtend: Record "Posted Sales Extended";
+        Outstr: OutStream;
+        Instr: InStream;
+        RecRef: RecordRef;
+        FldRef: FieldRef;
     begin
         WITH SalesInvoiceHeader DO BEGIN
             IF QRText <> '' THEN
                 QRCodeText := QRText;
 
-            QRCodeInput := QRCodeText;//CreateQRCodeInput(Cust.Name,Cust."Phone No.",Cust."E-Mail",Cust."Balance (LCY)");
-            QRCodeFileName := GetQRCode(QRCodeInput);
-            QRCodeFileName := MoveToMagicPath(QRCodeFileName); // To avoid confirmation dialogue on RTC
-                                                               //  MESSAGE('Hello');
-            CLEAR(TempBlob);
-            ThreeTierMgt.BLOBImport(TempBlob, QRCodeFileName);
-            IF TempBlob.HASVALUE THEN BEGIN
-                //    SalesInvoiceHdrExtend.GET(SalesInvoiceHeader."No.");//0712
-                SalesInvoiceHdrExtend.RESET;
-                SalesInvoiceHdrExtend.SETRANGE("No.", SalesInvoiceHeader."No.");
-                IF SalesInvoiceHdrExtend.FINDFIRST THEN;
-                //TBD SalesInvoiceHdrExtend."QR Code" := TempBlob.Blob;
-                SalesInvoiceHdrExtend.MODIFY;
-            END;
+            // QRCodeInput := QRCodeText;//CreateQRCodeInput(Cust.Name,Cust."Phone No.",Cust."E-Mail",Cust."Balance (LCY)");
+            // QRCodeFileName := GetQRCode(QRCodeInput);
+            // QRCodeFileName := MoveToMagicPath(QRCodeFileName); // To avoid confirmation dialogue on RTC
+            //                                                    //  MESSAGE('Hello');
+            // CLEAR(TempBlob);
+            // TempBlob.CreateOutStream(Outstr);
+            // Outstr.WriteText(QRText);
+            // TempBlob.CreateInStream(Instr);
+
+
+            // ThreeTierMgt.BLOBImport(TempBlob, QRCodeFileName);
+            // IF TempBlob.HASVALUE THEN BEGIN
+            //    SalesInvoiceHdrExtend.GET(SalesInvoiceHeader."No.");//0712
+            SalesInvoiceHdrExtend.RESET;
+            SalesInvoiceHdrExtend.SETRANGE("No.", SalesInvoiceHeader."No.");
+            IF SalesInvoiceHdrExtend.FINDFIRST THEN begin
+                // SalesInvoiceHdrExtend."QR Code".CreateOutStream(Outstr);
+                // Outstr.WriteText(QRText);
+                // SalesInvoiceHdrExtend.MODIFY;
+                RecRef.GetTable(SalesInvoiceHdrExtend);
+                QRGenerator.GenerateQRCodeImage(QRText, TempBlob);
+                TempBlob.ToRecordRef(RecRef, SalesInvoiceHdrExtend.FieldNo("QR Code"));
+                RecRef.Modify();
+            end;
+            //END;
 
             //TBD
             /*
@@ -130,24 +146,30 @@ codeunit 50012 "QR Code Management"
         QRCodeFileName: Text[1024];
         Cust: Record Customer;
         SalesCrMemoHdrExtend: Record "Posted Sales Extended";
+        RecRef: RecordRef;
     begin
         WITH SalesCrMemoHeader DO BEGIN
             IF QRText <> '' THEN
                 QRCodeText := QRText;
 
-            QRCodeInput := QRCodeText;//CreateQRCodeInput(Cust.Name,Cust."Phone No.",Cust."E-Mail",Cust."Balance (LCY)");
-            QRCodeFileName := GetQRCode(QRCodeInput);
-            QRCodeFileName := MoveToMagicPath(QRCodeFileName); // To avoid confirmation dialogue on RTC
+            // QRCodeInput := QRCodeText;//CreateQRCodeInput(Cust.Name,Cust."Phone No.",Cust."E-Mail",Cust."Balance (LCY)");
+            // QRCodeFileName := GetQRCode(QRCodeInput);
+            // QRCodeFileName := MoveToMagicPath(QRCodeFileName); // To avoid confirmation dialogue on RTC
 
-            CLEAR(TempBlob);
-            ThreeTierMgt.BLOBImport(TempBlob, QRCodeFileName);
-            IF TempBlob.HASVALUE THEN BEGIN
-                //    SalesCrMemoHdrExtend.GET(SalesCrMemoHeader."No.");
-                SalesCrMemoHdrExtend.RESET;
-                SalesCrMemoHdrExtend.SETRANGE("No.", SalesCrMemoHeader."No.");
-                IF SalesCrMemoHdrExtend.FINDFIRST THEN;
+            // CLEAR(TempBlob);
+            // ThreeTierMgt.BLOBImport(TempBlob, QRCodeFileName);
+            // IF TempBlob.HASVALUE THEN BEGIN
+            //    SalesCrMemoHdrExtend.GET(SalesCrMemoHeader."No.");
+            SalesCrMemoHdrExtend.RESET;
+            SalesCrMemoHdrExtend.SETRANGE("No.", SalesCrMemoHeader."No.");
+            IF SalesCrMemoHdrExtend.FINDFIRST THEN BEGIN
                 //TBD SalesCrMemoHdrExtend."QR Code" := TempBlob.Blob;
-                SalesCrMemoHdrExtend.MODIFY;
+                // SalesCrMemoHdrExtend.MODIFY;
+
+                RecRef.GetTable(SalesCrMemoHdrExtend);
+                QRGenerator.GenerateQRCodeImage(QRText, TempBlob);
+                TempBlob.ToRecordRef(RecRef, SalesCrMemoHdrExtend.FieldNo("QR Code"));
+                RecRef.Modify();
             END;
 
             //TBD

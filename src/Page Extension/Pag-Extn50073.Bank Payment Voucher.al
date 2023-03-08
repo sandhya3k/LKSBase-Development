@@ -118,7 +118,7 @@ pageextension 50073 pageextension50073 extends "Bank Payment Voucher"
             Visible = false;
         }
 
-        addafter("Account Name")
+        addafter("Currency Code")
         {
             field("Description 3"; Rec."Description 3 ")
             {
@@ -184,10 +184,19 @@ pageextension 50073 pageextension50073 extends "Bank Payment Voucher"
                 Caption = 'Cheque No.';
                 ApplicationArea = All;
             }
+
         }
         //<<#94
         addafter("Document No.")
         {
+            field("Party Type"; Rec."Party Type")
+            {
+                ApplicationArea = All;
+            }
+            field("Party Code"; Rec."Party Code")
+            {
+                ApplicationArea = All;
+            }
             field("Check Type"; Rec."Check Type")
             {
             }

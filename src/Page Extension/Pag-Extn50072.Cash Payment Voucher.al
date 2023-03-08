@@ -76,7 +76,7 @@ pageextension 50072 pageextension50072 extends "Cash Payment Voucher"
             Visible = false;
         }
 
-        addafter("Account Name")
+        addafter("Currency Code")
         {
             field("Description 3"; Rec."Description 3 ")
             {

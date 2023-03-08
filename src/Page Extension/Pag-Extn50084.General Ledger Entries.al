@@ -15,6 +15,14 @@ pageextension 50084 pageextension50084 extends "General Ledger Entries"
                 ApplicationArea = all;
             }
         }
+        addafter("G/L Account No.")
+        {
+            field("Description 3"; Rec."Description 3")
+            {
+                ApplicationArea = All;
+            }
+
+        }
         addafter(Description)
         {
             field("Cheque No."; Rec."Cheque No.")

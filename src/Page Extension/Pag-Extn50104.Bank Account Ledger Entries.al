@@ -44,6 +44,26 @@ pageextension 50104 pageextension50104 extends "Bank Account Ledger Entries"
             }
         }
         */
+        modify("Cheque No.")
+        {
+            Visible = False;
+        }
+        addbefore("Cheque Date")
+        {
+            field("Cheque No.2"; Rec."Cheque No. 2")
+            {
+                Caption = 'Cheque No.';
+                ApplicationArea = All;
+            }
+        }
+        addafter("Bank Account No.")
+        {
+            field("Description 3"; Rec."Description 3")
+            {
+                Caption = 'Description';
+                ApplicationArea = All;
+            }
+        }
         addafter("Entry No.")
         {
             field("Currency Amount"; Rec."Currency Amount")
