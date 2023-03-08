@@ -11,8 +11,13 @@ codeunit 50014 "Batch Job"
         case rec."Parameter String" of
             'SendCustomerEmail':
                 begin
-                    // if ResponseQueueRec."Invoice No." <> '' then begin
                     ResponseQueueRec.Reset();
+                    ResponseQueueRec.SetFilter(Method, '%1|%2', 'RTB', 'CRTB');
+                    ResponseQueuerec.SetFilter("Invoice Doc", '<>%1', '');
+                    ResponseQueueRec.SetFilter("Invoice No.", '<>%1', '');
+
+                    // if ResponseQueueRec."Invoice No." <> '' then begin
+                    //ResponseQueueRec.Reset();
                     IF ResponseQueueRec.FindSet() then begin
                         repeat
                             SendCustomerEmail(ResponseQueueRec."Invoice No.");
@@ -25,7 +30,7 @@ codeunit 50014 "Batch Job"
 
 
     end;
-    // END;
+    //END;
 
     procedure SendCustomerEmail(InvNo: Text)
     var
@@ -42,38 +47,39 @@ codeunit 50014 "Batch Job"
 
     begin
         //Clear(InvNo);
-        ResponseQueue.Reset();
-        ResponseQueue.SetFilter(Method, '%1|%2', 'RTB', 'CRTB');
-        ResponseQueue.SetFilter("Invoice Doc", '<>%1', '');
+        // ResponseQueue.Reset();
+        // ResponseQueue.SetFilter(Method, '%1|%2', 'RTB', 'CRTB');
+        // ResponseQueue.SetFilter("Invoice Doc", '<>%1', '');
 
-        if InvNo <> '' then 
-            ResponseQueue.SetRange("Invoice No.", InvNo);
-        if ResponseQueue.FindSet() then begin
-            repeat
-                IF SalesInvHdr.Get(InvNo) then begin
-                    if Customer.get(SalesInvHdr."Sell-to Customer No.") then begin
-                        if Environment.IsProduction() then
-                            ToAddress.Add(Customer."E-Mail")
-                        else
-                            if Environment.IsSandbox() then
-                                ToAddress.add('sandhya.m@3ktechnologies.com');
-                    end;
-                end else
-                    if SalesCrdHdr.get(InvNo) then begin
-                        if Customer.get(SalesCrdHdr."Sell-to Customer No.") then begin
-                            if Environment.IsProduction() then
-                                ToAddress.add(Customer."E-Mail")
-                            else
-                                if Environment.IsSandbox() then
-                                    ToAddress.add('sandhya.m@3ktechnologies.com');
-                        end;
-                    end;
-                BlobtoAzure(InvNo, ToAddress);
+        //  if InvNo <> '' then
+        // ResponseQueue.SetRange("Invoice No.", InvNo);
 
-            until ResponseQueue.Next() = 0;
-        end;
-       // end;
+        // if ResponseQueue.FindSet() then begin
+        //  repeat
+        IF SalesInvHdr.Get(InvNo) then begin
+            if Customer.get(SalesInvHdr."Sell-to Customer No.") then begin
+                if Environment.IsProduction() then
+                    ToAddress.Add(Customer."E-Mail")
+                else
+                    if Environment.IsSandbox() then
+                        ToAddress.add('tabrej.a@3ktechnologies.com');
+            end;
+        end else
+            if SalesCrdHdr.get(InvNo) then begin
+                if Customer.get(SalesCrdHdr."Sell-to Customer No.") then begin
+                    if Environment.IsProduction() then
+                        ToAddress.add(Customer."E-Mail")
+                    else
+                        if Environment.IsSandbox() then
+                            ToAddress.add('tabrej.a@3ktechnologies.com');
+                end;
+            end;
+        BlobtoAzure(InvNo, ToAddress);
+
+        //until ResponseQueue.Next() = 0;
     end;
+    // end;
+    //end;
 
     procedure BlobtoAzure(InvNo: Text;
             ToAddress: List of [Text])
