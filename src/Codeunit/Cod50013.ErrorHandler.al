@@ -30,10 +30,11 @@ codeunit 50013 "Error Handler"
         case true of
             JToken.SelectToken('Rtb', HeaderToken):
                 Proc := 'RTBCreate';
-            GetValue('RTBNo', JToken) > '':
-                Proc := 'CancelRTB';
             GetValue('WriteOffAmount', JToken) > '':
                 Proc := 'WriteOffAmount';
+            GetValue('RTBNo', JToken) > '':
+                Proc := 'CancelRTB';
+
             JToken.SelectToken('Branch', HeaderToken):
                 Proc := 'SyncBranch';
             JToken.SelectToken('Group', HeaderToken):
