@@ -14,30 +14,27 @@ reportextension 50101 "genJnlTest" extends "General Journal - Test GST"
             addafter(Options)
             {
 
-                field("Journal Template Name"; genJnl."Journal Template Name")
+                field(GenTemplate; GenTemplate)
                 {
                     Caption = 'Journal Template Name';
                     ApplicationArea = all;
-                    TableRelation = "Gen. Journal Line"."Journal Template Name";
-
-
-
-
-
+                    TableRelation = "Gen. Journal Template";
                 }
-                field("Journal Batch Name"; genJnl."Journal Batch Name")
+                field(Genbatch; Genbatch)
                 {
                     Caption = 'Journal Batch Name';
                     ApplicationArea = all;
-                    TableRelation = "Gen. Journal Line"."Journal Batch Name";
-
-
+                    TableRelation = "Gen. Journal Batch";
                 }
+
             }
 
         }
     }
     var
         genJnl: Record "Gen. Journal Line";
+        GenTemplate: Code[10];
+        Genbatch: Code[10];
+
 
 }
