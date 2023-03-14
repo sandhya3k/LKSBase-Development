@@ -117,6 +117,18 @@ pageextension 50073 pageextension50073 extends "Bank Payment Voucher"
         modify(Description)
         {
             Visible = false;
+            trigger OnBeforeValidate()
+            var
+                GenJnlRec: Record "Gen. Journal Line";
+
+            begin
+                // rec.Validate("Description 3 ",de);
+                GenJnlRec.Validate("Description 3 ", Rec.Description);
+
+
+
+            end;
+
         }
 
         addafter("Currency Code")
