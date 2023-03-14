@@ -15,7 +15,7 @@ pageextension 50068 pageextension50068 extends "Bank Receipt Voucher"
         modify(Description)
         {
             Visible = false;
-            trigger OnAfterValidate()
+            trigger OnBeforeValidate()
             var
 
             begin
