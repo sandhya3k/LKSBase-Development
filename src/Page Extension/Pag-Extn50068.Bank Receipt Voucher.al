@@ -22,9 +22,10 @@ pageextension 50068 pageextension50068 extends "Bank Receipt Voucher"
                 GenJnl.Reset();
                 GenJnl.SetRange("Journal Template Name", rec."Journal Template Name");
                 GenJnl.SetRange("Journal Batch Name", rec."Journal Batch Name");
-                if GenJnl.FindFirst() then
+                if GenJnl.FindFirst() then begin
                     GenJnl.Validate("Description 3 ", Rec.Description);
-                GenJnl.Modify();
+                    GenJnl.Modify();
+                end;
 
 
 
