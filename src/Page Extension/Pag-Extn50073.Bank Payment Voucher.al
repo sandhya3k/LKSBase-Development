@@ -117,7 +117,7 @@ pageextension 50073 pageextension50073 extends "Bank Payment Voucher"
         modify(Description)
         {
             Visible = false;
-            trigger OnBeforeValidate()
+            trigger OnAfterValidate()
             var
                 GenJnlRec: Record "Gen. Journal Line";
 
