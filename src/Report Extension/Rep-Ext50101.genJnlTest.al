@@ -18,6 +18,8 @@ reportextension 50101 "genJnlTest" extends "General Journal - Test GST"
                 {
                     Caption = 'Journal Template Name';
                     ApplicationArea = all;
+                    TableRelation = "Gen. Journal Line"."Journal Template Name";
+
 
 
 
@@ -27,6 +29,8 @@ reportextension 50101 "genJnlTest" extends "General Journal - Test GST"
                 {
                     Caption = 'Journal Batch Name';
                     ApplicationArea = all;
+                    TableRelation = "Gen. Journal Line"."Journal Batch Name";
+
 
                 }
             }
