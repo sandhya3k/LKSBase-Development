@@ -11,7 +11,7 @@ reportextension 50101 "genJnlTest" extends "General Journal - Test"
     {
         layout
         {
-            addlast(content)
+            addafter(Options)
             {
 
                 field("Journal Template Name"; genJnl."Journal Template Name")
