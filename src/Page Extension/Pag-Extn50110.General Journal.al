@@ -36,6 +36,67 @@ pageextension 50110 pageextension50110 extends "General Journal"
             {
                 ApplicationArea = All;
             }
+            field("Check Type"; Rec."Check Type")
+            {
+                ApplicationArea = All;
+                ToolTip = 'Specifies the value of the Check Type field.';
+            }
+            field("External Doc. Date"; Rec."External Doc. Date")
+            {
+                ApplicationArea = All;
+                ToolTip = 'Specifies the value of the External Doc. Date field.';
+            }
+            field("Line No."; Rec."Line No.")
+            {
+                ApplicationArea = All;
+                ToolTip = 'Specifies the value of the Line No. field.';
+            }
+            field("Income Account"; Rec."Income Account")
+            {
+                ApplicationArea = All;
+                ToolTip = 'Specifies the value of the Income Account field.';
+            }
+            field("Ship-to Code"; Rec."Ship-to Code")
+            {
+                ApplicationArea = All;
+                ToolTip = 'Specifies this Ship-to-Code for the customer related transactions';
+            }
+            field("Inc. GST in TDS Base"; Rec."Inc. GST in TDS Base")
+            {
+                ApplicationArea = All;
+                ToolTip = 'Specifies the value of the Inc. GST in TDS Base field.';
+            }
+            field("Bank Charge"; Rec."Bank Charge")
+            {
+                ApplicationArea = All;
+                ToolTip = 'Specifies whether the entry is related to bank charges or not.';
+            }
+            field("Order Address State Code"; Rec."Order Address State Code")
+            {
+                ApplicationArea = All;
+                ToolTip = 'Specifies the value of the Order Address State Code field.';
+            }
+            field("Bill to-Location(POS)"; Rec."Bill to-Location(POS)")
+            {
+                ApplicationArea = All;
+                ToolTip = 'Specifies the value of the Bill to-Location(POS) field.';
+            }
+            field("GST TDS/TCS Base Amount (LCY)"; Rec."GST TDS/TCS Base Amount (LCY)")
+            {
+                ApplicationArea = All;
+                ToolTip = 'Specifies the value of the GST TDS/TCS Base Amount (LCY) field.';
+            }
+            field("GST TDS/TCS Amount (LCY)"; Rec."GST TDS/TCS Amount (LCY)")
+            {
+                ApplicationArea = All;
+                ToolTip = 'Specifies the value of the GST TDS/TCS Amount (LCY) field.';
+            }
+            field("POS Out Of India"; Rec."POS Out Of India")
+            {
+                ApplicationArea = All;
+                ToolTip = 'Specifies if the place of supply of invoice is out of India.';
+            }
+
         }
     }
     actions

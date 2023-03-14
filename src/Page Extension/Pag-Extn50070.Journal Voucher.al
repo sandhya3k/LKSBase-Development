@@ -77,6 +77,72 @@ pageextension 50070 pageextension50070 extends "Journal Voucher"
                 Caption = 'Description';
                 ApplicationArea = all;
             }
+            field("GST Component Code"; Rec."GST Component Code")
+            {
+                ApplicationArea = All;
+                ToolTip = 'Specifies the GST component code for which the entry is being posted.';
+            }
+            field("Sales Invoice Type"; Rec."Sales Invoice Type")
+            {
+                ApplicationArea = All;
+                ToolTip = 'Specifies the Type of Sales Invoice.';
+            }
+            field("Excl. GST in TCS Base"; Rec."Excl. GST in TCS Base")
+            {
+                ApplicationArea = All;
+                ToolTip = 'Select this field to exclude GST value in the TCS Base.';
+            }
+            field("Amount Excl. GST"; Rec."Amount Excl. GST")
+            {
+                ApplicationArea = All;
+                ToolTip = 'Specifies the Amount Excluding GST for the journal line.';
+            }
+            field("GST Bill-to/BuyFrom State Code"; Rec."GST Bill-to/BuyFrom State Code")
+            {
+                ApplicationArea = All;
+                ToolTip = 'Specifies the value of the GST Bill-to/BuyFrom State Code field.';
+            }
+            field("GST Ship-to State Code"; Rec."GST Ship-to State Code")
+            {
+                ApplicationArea = All;
+                ToolTip = 'Specifies the value of the GST Ship-to State Code field.';
+            }
+            field("Location State Code"; Rec."Location State Code")
+            {
+                ApplicationArea = All;
+                ToolTip = 'Specifies the sate code mentioned in location used in the transaction.';
+            }
+            field("GST on Advance Payment"; Rec."GST on Advance Payment")
+            {
+                ApplicationArea = All;
+                ToolTip = 'Specifies if GST is required to be calculated on Advance Payment.';
+            }
+            field("Ship-to Code"; Rec."Ship-to Code")
+            {
+                ApplicationArea = All;
+                ToolTip = 'Specifies this Ship-to-Code for the customer related transactions';
+            }
+            field(Remarks; Rec.Remarks)
+            {
+                ApplicationArea = All;
+                ToolTip = 'Specifies the value of the Remarks field.';
+            }
+            field("POS Out Of India"; Rec."POS Out Of India")
+            {
+                ApplicationArea = All;
+                ToolTip = 'Specifies if the place of supply of invoice is out of India.';
+            }
+            field("GST Inv. Rounding Precision"; Rec."GST Inv. Rounding Precision")
+            {
+                ApplicationArea = All;
+                ToolTip = 'Specifies the value of the GST Inv. Rounding Precision field.';
+            }
+            field("GST Inv. Rounding Type"; Rec."GST Inv. Rounding Type")
+            {
+                ApplicationArea = All;
+                ToolTip = 'Specifies the value of the GST Inv. Rounding Type field.';
+            }
+
         }
         //#122
 

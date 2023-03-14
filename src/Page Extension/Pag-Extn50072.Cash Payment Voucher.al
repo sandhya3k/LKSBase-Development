@@ -20,6 +20,8 @@ pageextension 50072 pageextension50072 extends "Cash Payment Voucher"
                 Caption = 'Cheque No.';
                 ApplicationArea = All;
             }
+
+
         }
         //<<#94
         addfirst(Control1)
@@ -68,7 +70,69 @@ pageextension 50072 pageextension50072 extends "Cash Payment Voucher"
         {
             field("External Doc. Date"; Rec."External Doc. Date")
             {
+                ApplicationArea = all;
+
             }
+            field("Party Type"; Rec."Party Type")
+            {
+                ApplicationArea = all;
+            }
+            field("Party Code"; Rec."Party Code")
+            {
+                ApplicationArea = All;
+                ToolTip = 'Specifies the party number that the entry on the journal line will be posted to.';
+            }
+            field("Order Address Code"; Rec."Order Address Code")
+            {
+                ApplicationArea = All;
+                ToolTip = 'Specifies the value of the Order Address Code field.';
+            }
+            field("Vendor GST Reg. No."; Rec."Vendor GST Reg. No.")
+            {
+                ApplicationArea = All;
+                ToolTip = 'Specifies the GST registration number of the Vendor specified on the journal line.';
+            }
+            field("Bill to-Location(POS)"; Rec."Bill to-Location(POS)")
+            {
+                ApplicationArea = All;
+                ToolTip = 'Specifies the value of the Bill to-Location(POS) field.';
+            }
+            field("GST TDS/TCS Amount (LCY)"; Rec."GST TDS/TCS Amount (LCY)")
+            {
+                ApplicationArea = All;
+                ToolTip = 'Specifies the value of the GST TDS/TCS Amount (LCY) field.';
+            }
+            field("GST TDS/TCS Base Amount (LCY)"; Rec."GST TDS/TCS Base Amount (LCY)")
+            {
+                ApplicationArea = All;
+                ToolTip = 'Specifies the value of the GST TDS/TCS Base Amount (LCY) field.';
+            }
+            field("POS Out Of India"; Rec."POS Out Of India")
+            {
+                ApplicationArea = All;
+                ToolTip = 'Specifies if the place of supply of invoice is out of India.';
+            }
+            field("GST Bill-to/BuyFrom State Code"; Rec."GST Bill-to/BuyFrom State Code")
+            {
+                ApplicationArea = All;
+                ToolTip = 'Specifies the value of the GST Bill-to/BuyFrom State Code field.';
+            }
+            field("GST Ship-to State Code"; Rec."GST Ship-to State Code")
+            {
+                ApplicationArea = All;
+                ToolTip = 'Specifies the value of the GST Ship-to State Code field.';
+            }
+            field("Location State Code"; Rec."Location State Code")
+            {
+                ApplicationArea = All;
+                ToolTip = 'Specifies the sate code mentioned in location used in the transaction.';
+            }
+            field("Ship-to Code"; Rec."Ship-to Code")
+            {
+                ApplicationArea = All;
+                ToolTip = 'Specifies this Ship-to-Code for the customer related transactions';
+            }
+
         }
         //#122
         modify(Description)

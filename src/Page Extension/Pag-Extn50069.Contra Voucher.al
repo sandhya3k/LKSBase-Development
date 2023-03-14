@@ -47,6 +47,28 @@ pageextension 50069 pageextension50069 extends "Contra Voucher"
                 Caption = 'Description';
                 ApplicationArea = all;
             }
+            field("GST Bill-to/BuyFrom State Code"; Rec."GST Bill-to/BuyFrom State Code")
+            {
+                ApplicationArea = All;
+                ToolTip = 'Specifies the value of the GST Bill-to/BuyFrom State Code field.';
+            }
+            field("GST Ship-to State Code"; Rec."GST Ship-to State Code")
+            {
+                ApplicationArea = All;
+                ToolTip = 'Specifies the value of the GST Ship-to State Code field.';
+            }
+            field("GST on Advance Payment"; Rec."GST on Advance Payment")
+            {
+                ApplicationArea = All;
+                ToolTip = 'Specifies if GST is required to be calculated on Advance Payment.';
+            }
+            field("Ship-to Code"; Rec."Ship-to Code")
+            {
+                ApplicationArea = All;
+                ToolTip = 'Specifies this Ship-to-Code for the customer related transactions';
+            }
+
+
         }
         //#122
     }
