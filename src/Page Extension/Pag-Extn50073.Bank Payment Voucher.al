@@ -24,6 +24,7 @@ pageextension 50073 pageextension50073 extends "Bank Payment Voucher"
         modify("Check Printed")
         {
             Visible = true;
+            ApplicationArea = all;
         }
 
         //Unsupported feature: Property Modification (ImplicitType) on ""Cheque No.2"(Control 1500048)".
@@ -125,6 +126,42 @@ pageextension 50073 pageextension50073 extends "Bank Payment Voucher"
                 Caption = 'Description';
                 ApplicationArea = all;
             }
+            field("Ship-to Code"; Rec."Ship-to Code")
+            {
+                ApplicationArea = all;
+            }
+            field("Inc. GST in TDS Base"; Rec."Inc. GST in TDS Base")
+            {
+                ApplicationArea = all;
+            }
+            field("Order Address Code"; Rec."Order Address Code")
+            {
+                ApplicationArea = all;
+
+            }
+            field("Bill to-Location(POS)"; Rec."Bill to-Location(POS)")
+            {
+                ApplicationArea = all;
+            }
+            field("GST TDS/TCS Base Amount (LCY)"; Rec."GST TDS/TCS Base Amount (LCY)")
+            {
+                ApplicationArea = all;
+            }
+            field("GST TDS/TCS Amount (LCY)"; Rec."GST TDS/TCS Amount (LCY)")
+            {
+                ApplicationArea = all;
+            }
+            field("POS Out Of India"; Rec."POS Out Of India")
+            {
+                ApplicationArea = all;
+            }
+            // field("Bank Payment Type";Rec."Bank Payment Type")
+            // {
+            //     ApplicationArea = all;
+
+            // }
+            // field("Check Printed";Rec."Check Printed")
+
         }
         //#122
         /*
@@ -199,10 +236,13 @@ pageextension 50073 pageextension50073 extends "Bank Payment Voucher"
             }
             field("Check Type"; Rec."Check Type")
             {
+                ApplicationArea = all;
             }
             field("External Doc. Date"; Rec."External Doc. Date")
             {
+                ApplicationArea = all;
             }
+
             field("Collection No."; Rec."Collection No.")
             {
                 Caption = 'Exp.Doc. No.';
@@ -243,16 +283,24 @@ pageextension 50073 pageextension50073 extends "Bank Payment Voucher"
         {
             field("Source Code"; Rec."Source Code")
             {
+                ApplicationArea = all;
             }
             field("Line No."; Rec."Line No.")
             {
+                ApplicationArea = all;
+
             }
             field("Income Account"; Rec."Income Account")
             {
+                ApplicationArea = all;
             }
             field("Group Head"; Rec."Group Head")
             {
             }
+            // field("Check Type"; Rec."Check Type")
+            // {
+            //     ApplicationArea = all;
+            // }
         }
     }
     actions
