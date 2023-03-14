@@ -15,6 +15,20 @@ pageextension 50068 pageextension50068 extends "Bank Receipt Voucher"
         modify(Description)
         {
             Visible = false;
+            trigger OnAfterValidate()
+            var
+
+            begin
+                GenJnl.Reset();
+                GenJnl.SetRange("Journal Template Name", rec."Journal Template Name");
+                GenJnl.SetRange("Journal Batch Name", rec."Journal Batch Name");
+                if GenJnl.FindFirst() then
+                    GenJnl.Validate("Description 3 ", Rec.Description);
+
+
+
+
+            end;
         }
 
         addafter("Account Name")
@@ -853,5 +867,6 @@ pageextension 50068 pageextension50068 extends "Bank Receipt Voucher"
         GenJournalRec: Record "Gen. Journal Line";
         BankPaymentAdviceXml: XmlPort "Bank Payment Advice";
         CurrentJnlBatchName: Code[10];
+        GenJnl: Record "Gen. Journal Line";
 }
 
