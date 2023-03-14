@@ -25,11 +25,12 @@ reportextension 50101 "genJnlTest" extends "General Journal - Test GST"
                     Caption = 'Journal Batch Name';
                     ApplicationArea = all;
                     //TableRelation = "Gen. Journal Batch".Name;
-                    trigger OnValidate()
+                    trigger OnLookup(var text: Text): Boolean
                     var
-                        genBatch: page "General Journal Batches";
+                        genBatch: Record "Gen. Journal Batch";
                     begin
-                        genBatch.RunModal()
+                        if Page.RunModal(Page::"General Journal Batches", genBatch) = Action::LookupOK then;
+
 
 
                     end;
