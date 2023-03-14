@@ -6,6 +6,7 @@ codeunit 50014 "Batch Job"
         case Rec."Parameter String" of
             'UploadFileToAzure':
                 UploadFileToAzure('');
+                
 
         end;
         case rec."Parameter String" of
