@@ -1,4 +1,4 @@
-reportextension 50101 "genJnlTest" extends "General Journal - Test"
+reportextension 50101 "genJnlTest" extends "General Journal - Test GST"
 {
     // dataset
     // {
