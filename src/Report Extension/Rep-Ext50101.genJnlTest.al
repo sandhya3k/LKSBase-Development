@@ -24,7 +24,15 @@ reportextension 50101 "genJnlTest" extends "General Journal - Test GST"
                 {
                     Caption = 'Journal Batch Name';
                     ApplicationArea = all;
-                    TableRelation = "Gen. Journal Batch".Name;
+                    //TableRelation = "Gen. Journal Batch".Name;
+                    trigger OnValidate()
+                    var
+                        genBatch: page "General Journal Batches";
+                    begin
+                        genBatch.RunModal()
+
+
+                    end;
                 }
 
             }
