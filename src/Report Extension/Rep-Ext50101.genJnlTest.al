@@ -24,7 +24,7 @@ reportextension 50101 "genJnlTest" extends "General Journal - Test GST"
                 {
                     Caption = 'Journal Batch Name';
                     ApplicationArea = all;
-                    TableRelation = "Gen. Journal Batch";
+                    TableRelation = "Gen. Journal Template";
                 }
 
             }
