@@ -24,6 +24,48 @@ pageextension 50068 pageextension50068 extends "Bank Receipt Voucher"
                 ApplicationArea = all;
                 caption = 'Description';
             }
+            field("GST Customer Type"; Rec."GST Customer Type")
+            {
+                ApplicationArea = all;
+            }
+            field("Check Type"; Rec."Check Type")
+            {
+                ApplicationArea = all;
+            }
+            field("POS Out Of India"; Rec."POS Out Of India")
+            {
+                ApplicationArea = all;
+            }
+            field("GST TDS/TCS Amount (LCY)"; Rec."GST TDS/TCS Amount (LCY)")
+            {
+                ApplicationArea = all;
+            }
+            field("GST TDS/TCS Base Amount (LCY)"; Rec."GST TDS/TCS Base Amount (LCY)")
+            {
+                ApplicationArea = all;
+            }
+            field("Order Address Code"; Rec."Order Address Code")
+            {
+                ApplicationArea = all;
+            }
+            field("Bill to-Location(POS)"; Rec."Bill to-Location(POS)")
+            {
+                ApplicationArea = all;
+            }
+            field(OWNER2; Rec.OWNER2)
+            {
+                ApplicationArea = all;
+            }
+            field("Case Id"; Rec."Case Id")
+            {
+                ApplicationArea = all;
+
+            }
+            field("Group Head"; Rec."Group Head")
+            {
+                ApplicationArea = all;
+            }
+
         }
         //#122
 
