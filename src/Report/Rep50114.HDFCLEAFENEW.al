@@ -294,9 +294,9 @@ report 50114 "HDFC LEAFE NEW"
                                 CheckLedgEntry."Document Type" := "Document Type";
                                 //CheckLedgEntry."Check No." := UseCheckNo;
                                 CheckLedgEntry."Cheque No. 2" := UseCheckNo; //#94
-                                // CheckLedgEntry."Document No." := UseCheckNo;
-                                // CheckLedgEntry.Description := Description;
-                                CheckLedgEntry."Description 3 " := "Description 3 ";//#122
+                                                                             // CheckLedgEntry."Document No." := UseCheckNo;
+                                CheckLedgEntry.Description := Description;
+                                // CheckLedgEntry."Description 3 " := "Description 3 ";//#122
                                 CheckLedgEntry."Bank Payment Type" := "Bank Payment Type";
                                 CheckLedgEntry."Bal. Account Type" := BalancingType;
                                 CheckLedgEntry."Bal. Account No." := BalancingNo;
@@ -350,8 +350,8 @@ report 50114 "HDFC LEAFE NEW"
                                 CheckLedgEntry."Bank Account No." := BankAcc2."No.";
                                 CheckLedgEntry."Posting Date" := "Posting Date";
                                 CheckLedgEntry."Document No." := UseCheckNo;
-                                // CheckLedgEntry.Description := Text023;
-                                CheckLedgEntry."Description 3 " := Text023;
+                                CheckLedgEntry.Description := Text023;
+                                //CheckLedgEntry."Description 3 " := Text023;
 
                                 CheckLedgEntry."Bank Payment Type" := "Bank Payment Type"::"Computer Check";
                                 CheckLedgEntry."Entry Status" := CheckLedgEntry."Entry Status"::"Test Print";
@@ -464,8 +464,8 @@ report 50114 "HDFC LEAFE NEW"
                             GenJnlLine3."Account Type" := GenJnlLine3."Account Type"::"Bank Account";
                             GenJnlLine3.Validate("Account No.", BankAcc2."No.");
                             if BalancingType <> BalancingType::"G/L Account" then
-                                //GenJnlLine3.Description := StrSubstNo(Text014, SelectStr(BalancingType + 1, Text062), BalancingNo);
-                             GenJnlLine3."Description 3 " := StrSubstNo(Text014, SelectStr(BalancingType + 1, Text062), BalancingNo);//#122
+                                GenJnlLine3.Description := StrSubstNo(Text014, SelectStr(BalancingType + 1, Text062), BalancingNo);
+                            //GenJnlLine3."Description 3 " := StrSubstNo(Text014, SelectStr(BalancingType + 1, Text062), BalancingNo);//#122
 
                             GenJnlLine3.Validate(Amount, -TotalLineAmount);
                             GenJnlLine3."Bank Payment Type" := GenJnlLine3."Bank Payment Type"::"Computer Check";
@@ -575,8 +575,8 @@ report 50114 "HDFC LEAFE NEW"
                         //2021 Because Pay to added into cheque for everyoption**start**
                         BalancingType::"G/L Account":
                             begin
-                                // CheckToAddr[1] := GenJnlLine.Description;
-                                CheckToAddr[1] := GenJnlLine."Description 3 ";
+                                CheckToAddr[1] := GenJnlLine.Description;
+                                //CheckToAddr[1] := GenJnlLine."Description 3 ";
                             end;
                         //TBD
                         /*
@@ -591,13 +591,13 @@ report 50114 "HDFC LEAFE NEW"
                         */
                         BalancingType::"Fixed Assets":
                             begin
-                                // CheckToAddr[1] := GenJnlLine.Description;
-                                CheckToAddr[1] := GenJnlLine."Description 3 ";
+                                CheckToAddr[1] := GenJnlLine.Description;
+                                //CheckToAddr[1] := GenJnlLine."Description 3 ";
                             end;
                         BalancingType::"IC Partner":
                             begin
-                                // CheckToAddr[1] := GenJnlLine.Description;
-                                CheckToAddr[1] := GenJnlLine."Description 3 "
+                                CheckToAddr[1] := GenJnlLine.Description;
+                                // CheckToAddr[1] := GenJnlLine."Description 3 "
                             end;
                     //TBD
                     /*

@@ -3,18 +3,18 @@ pageextension 50110 pageextension50110 extends "General Journal"
     layout
     {
         //#122
-        modify(Description)
-        {
-            Visible = false;
-        }
+        // modify(Description)
+        // {
+        //     Visible = false;
+        // }
 
         addafter("Document No.")
         {
-            field("Description 3"; Rec."Description 3 ")
-            {
-                Caption = 'Description';
-                ApplicationArea = all;
-            }
+            // field("Description 3"; Rec."Description 3 ")
+            // {
+            //     Caption = 'Description';
+            //     ApplicationArea = all;
+            // }
         }
         //#122
         modify("Cheque No.")

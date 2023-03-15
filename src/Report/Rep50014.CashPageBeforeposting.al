@@ -23,7 +23,7 @@ report 50014 "Cash Page Before posting"
             column(TotalOpenBal; TotalOpenBal)
             {
             }
-            column(Gen__Journal_Line_Description; "Description 3 ")
+            column(Gen__Journal_Line_Description; Description)
             {
             }
             // column(Description_3;"Description 3")

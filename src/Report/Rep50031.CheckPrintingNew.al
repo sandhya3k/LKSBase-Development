@@ -91,8 +91,8 @@ report 50031 "Check Printing New"
                   (GenJnlLine."Account Type" = GenJnlLine."Account Type"::Vendor) then
                     if GLAcc.Get(GenJnlLine."Account No.") or
                        Vend.Get(Vend."No.") then begin
-                        //Address[8] := Description;
-                        Address[8] := "Description 3 ";//#122
+                        Address[8] := Description;
+                        // Address[8] := "Description 3 ";//#122
                         Address[7] := GLAcc.Name;
                         Address[5] := GLAcc."No.";
                         GenJoualNarration.SetRange(GenJoualNarration."Journal Template Name", GenJnlLine."Journal Template Name");
@@ -121,8 +121,8 @@ report 50031 "Check Printing New"
                 end
 
                 else begin
-                    // Doc1 := GenJnlLine.Description + '   ' + GenJnlLine."Mode of Payment";
-                    Doc1 := GenJnlLine."Description 3 " + '   ' + GenJnlLine."Mode of Payment";//#112
+                    Doc1 := GenJnlLine.Description + '   ' + GenJnlLine."Mode of Payment";
+                    // Doc1 := GenJnlLine."Description 3 " + '   ' + GenJnlLine."Mode of Payment";//#112
 
                     Amunt := Format(GenJnlLine.Amount);
                     //Amnt2:='';
@@ -139,8 +139,8 @@ report 50031 "Check Printing New"
                     //  MESSAGE(GenJnlLine."Document No.");
                     if GLAcc.Get(GenJnlLine."Account No.") then;
                     //Address[9]:=GLAcc.Name;
-                    //Address[8] := GenJnlLine.Description;
-                    Address[8] := GenJnlLine."Description 3 ";//#122
+                    Address[8] := GenJnlLine.Description;
+                    //Address[8] := GenJnlLine."Description 3 ";//#122
                     ExtDoc := '';
                     InvDate := '';
                     Branch := GenJnlLine."Shortcut Dimension 1 Code";

@@ -57,7 +57,7 @@ pageextension 50072 pageextension50072 extends "Cash Payment Voucher"
                     rec.Validate("Credit Amount", ExpanceDetail."Amount Credit");
                     rec.Validate("Cheque No. 2", ExpanceDetail."Cheque No.");
                     //#122
-                    rec.Validate("Description 3 ", ExpanceDetail.Description);
+                    //rec.Validate("Description 3 ", ExpanceDetail.Description);
                     //#122
                     rec.Validate("Cheque Date", ExpanceDetail."Cheque Date");
                     rec.Validate("Document Date", ExpanceDetail."Creation Date");
@@ -135,18 +135,18 @@ pageextension 50072 pageextension50072 extends "Cash Payment Voucher"
 
         }
         //#122
-        modify(Description)
-        {
-            Visible = false;
-        }
+        // modify(Description)
+        // {
+        //     Visible = false;
+        // }
 
         addafter("Currency Code")
         {
-            field("Description 3"; Rec."Description 3 ")
-            {
-                Caption = 'Description';
-                ApplicationArea = all;
-            }
+            // field("Description 3"; Rec."Description 3 ")
+            // {
+            //     Caption = 'Description';
+            //     ApplicationArea = all;
+            // }
         }
         //#122
 
