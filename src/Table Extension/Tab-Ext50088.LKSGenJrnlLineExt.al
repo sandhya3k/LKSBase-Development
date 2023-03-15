@@ -462,10 +462,10 @@ tableextension 50088 "LKSGenJrnlLineExt" extends "Gen. Journal Line"
             Caption = 'Cheque No.';
         }
         // //<<#122
-        // field(50023; "Description 3 "; text[100])
-        // {
-        //     Caption = 'Description';
-        // }
+        field(50023; "Description 3 "; text[100])
+        {
+            Caption = 'Description';
+        }
         // //#122>>
         //<<#122
         // field(50024; "Description 3"; text[100])

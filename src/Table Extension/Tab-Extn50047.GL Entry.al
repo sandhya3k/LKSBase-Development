@@ -59,12 +59,12 @@ tableextension 50047 tableextension50047 extends "G/L Entry"
             Caption = 'Location Code';
             DataClassification = ToBeClassified;
         }
-        //#112
-        // field(50018; "Description 3"; Text[100])
-        // {
-        //     Caption = 'Description';
-        // }
-        //#112
+        //#122
+        field(50018; "Description 3"; Text[100])
+        {
+            Caption = 'Description';
+        }
+        //#122
     }
 
     var
