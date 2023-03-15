@@ -35,18 +35,18 @@ pageextension 50069 pageextension50069 extends "Contra Voucher"
             }
         }
         //#122
-        modify(Description)
-        {
-            Visible = false;
-        }
+        // modify(Description)
+        // {
+        //     Visible = false;
+        // }
 
         addafter("Currency Code")
         {
-            field("Description 3"; Rec."Description 3 ")
-            {
-                Caption = 'Description';
-                ApplicationArea = all;
-            }
+            // field("Description 3"; Rec."Description 3 ")
+            // {
+            //     Caption = 'Description';
+            //     ApplicationArea = all;
+            // }
             field("GST Bill-to/BuyFrom State Code"; Rec."GST Bill-to/BuyFrom State Code")
             {
                 ApplicationArea = All;

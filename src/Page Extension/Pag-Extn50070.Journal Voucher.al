@@ -65,18 +65,18 @@ pageextension 50070 pageextension50070 extends "Journal Voucher"
             }
         }
         //#122
-        modify(Description)
-        {
-            Visible = false;
-        }
+        // modify(Description)
+        // {
+        //     Visible = false;
+        // }
 
         addafter("Currency Code")
         {
-            field("Description 3"; Rec."Description 3 ")
-            {
-                Caption = 'Description';
-                ApplicationArea = all;
-            }
+            // field("Description 3"; Rec."Description 3 ")
+            // {
+            //     Caption = 'Description';
+            //     ApplicationArea = all;
+            // }
             field("GST Component Code"; Rec."GST Component Code")
             {
                 ApplicationArea = All;

@@ -3,18 +3,18 @@ pageextension 50173 "CashReceiptVou" extends "Cash Receipt Voucher"
     layout
     {
         //#122
-        modify(Description)
-        {
-            Visible = false;
-        }
+        // modify(Description)
+        // {
+        //     Visible = false;
+        // }
 
         addafter("Account Name")
         {
-            field("Description 3"; Rec."Description 3 ")
-            {
-                Caption = 'Description';
-                ApplicationArea = all;
-            }
+            // field("Description 3"; Rec."Description 3 ")
+            // {
+            //     Caption = 'Description';
+            //     ApplicationArea = all;
+            // }
             field("Amount Excl. GST"; Rec."Amount Excl. GST")
             {
                 ApplicationArea = All;

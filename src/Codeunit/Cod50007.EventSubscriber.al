@@ -51,7 +51,7 @@ codeunit 50007 "Event Subscriber"
     begin
         //GLEntry."Cheque No." := GenJournalLine."Cheque No.";//TEAM::1426
         GLEntry."Cheque No." := GenJournalLine."Cheque No. 2"; // #94
-        GLEntry."Description 3" := GenJournalLine."Description 3 ";//#122
+                                                               //  GLEntry."Description 3" := GenJournalLine."Description 3 ";//#122
         GLEntry."Cheque Date" := GenJournalLine."Cheque Date";//TEAM::1426
         GLEntry."Applies-to Doc. No." := GenJournalLine."Applies-to Doc. No.";//TEAM::1426
         GLEntry."Issuing Bank Name" := GenJournalLine."Issuing Bank Name"; //TEAM::1426
@@ -70,7 +70,7 @@ codeunit 50007 "Event Subscriber"
         CustLedgerEntry."Nature of Invoice" := GenJournalLine."Invoice Type";
         //CustLedgerEntry."Cheque No." := GenJournalLine."Cheque No.";
         CustLedgerEntry."Cheque No." := GenJournalLine."Cheque No. 2";// #94
-        CustLedgerEntry."Description 3" := GenJournalLine."Description 3 ";//#122
+        //CustLedgerEntry."Description 3" := GenJournalLine."Description 3 ";//#122
         CustLedgerEntry."Cheque Date" := GenJournalLine."Cheque Date";
         CustLedgerEntry."Payment Made By" := GenJournalLine."Payment Made By";
         CustLedgerEntry.OWNER2 := GenJournalLine.OWNER2;//
@@ -82,7 +82,7 @@ codeunit 50007 "Event Subscriber"
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Gen. Jnl.-Post Line", 'OnAfterInitVendLedgEntry', '', false, false)]
     local procedure OnAfterInitVendLedgEntry(var VendorLedgerEntry: Record "Vendor Ledger Entry"; GenJournalLine: Record "Gen. Journal Line"; var GLRegister: Record "G/L Register")
     begin
-        VendorLedgerEntry."Description 3" := GenJournalLine."Description 3 ";
+        //VendorLedgerEntry."Description 3" := GenJournalLine."Description 3 ";
     end;
     // <<#122
 
@@ -336,7 +336,7 @@ codeunit 50007 "Event Subscriber"
             BankAccountLedgerEntry."Cheque No. 2" := GenJournalLine."Document No.";
             BankAccountLedgerEntry."Cheque Date" := GenJournalLine."Posting Date";
         end;
-        BankAccountLedgerEntry."Description 3" := GenJournalLine."Description 3 ";//#122
+        // BankAccountLedgerEntry."Description 3" := GenJournalLine."Description 3 ";//#122
         /*if GLSetup."Activate Cheque No." then begin
             BankAccountLedgerEntry."Cheque No. 2" := GenJournalLine."Cheque No. 2";
             BankAccountLedgerEntry."Cheque Date" := GenJournalLine."Cheque Date";
@@ -365,7 +365,7 @@ codeunit 50007 "Event Subscriber"
             CheckLedgerEntry."Cheque No. 2" := BankAccountLedgerEntry."Cheque No. 2";
             CheckLedgerEntry."Check Date" := BankAccountLedgerEntry."Cheque Date";
         end;
-        CheckLedgerEntry."Description 3 " := BankAccountLedgerEntry."Description 3"; //#122
+        //CheckLedgerEntry."Description 3 " := BankAccountLedgerEntry."Description 3"; //#122
 
     end;
 

@@ -35,11 +35,11 @@ pageextension 50068 pageextension50068 extends "Bank Receipt Voucher"
 
         addafter("Account Name")
         {
-            field("Description 3"; Rec."Description 3 ")
-            {
-                ApplicationArea = all;
-                caption = 'Description';
-            }
+            // field("Description 3"; Rec."Description 3 ")
+            // {
+            //     ApplicationArea = all;
+            //     caption = 'Description';
+            // }
             field("GST Customer Type"; Rec."GST Customer Type")
             {
                 ApplicationArea = all;
@@ -433,7 +433,7 @@ pageextension 50068 pageextension50068 extends "Bank Receipt Voucher"
                     //rec."Cheque No." := CopyStr(CollectionDetail."Cheque No.", 1, 10);
                     rec.Validate("Cheque No. 2", CollectionDetail."Cheque No.");
                     //#122
-                    rec.Validate("Description 3 ", CollectionDetail."Client Name");
+                    //rec.Validate("Description 3 ", CollectionDetail."Client Name");
                     //#122
                     rec.Validate("Cheque Date", CollectionDetail."Cheque Date");
                     rec.Validate("Document Date", CollectionDetail."Creation Date");

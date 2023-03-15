@@ -74,12 +74,12 @@ report 50106 "Voucher Test Report"
                 column(AccNameCaption; AccNameCap)
                 {
                 }
-                // column(Gen__Journal_Line_DescriptionCaption; "Gen. Journal Line".FieldCaption(Description))
-                // {
-                //}
-                column(Gen__Journal_Line_DescriptionCaption; "Gen. Journal Line".FieldCaption("Description 3 "))
+                column(Gen__Journal_Line_DescriptionCaption; "Gen. Journal Line".FieldCaption(Description))
                 {
                 }
+                // column(Gen__Journal_Line_DescriptionCaption; "Gen. Journal Line".FieldCaption("Description 3 "))
+                // {
+                // }
                 column(Gen__Journal_Line__Gen__Posting_Type_Caption; Gen__Journal_Line__Gen__Posting_Type_Cap)
                 {
                 }
@@ -128,7 +128,7 @@ report 50106 "Voucher Test Report"
                     // column(Gen__Journal_Line_Description; )
                     // {
                     // }
-                    column(Gen__Journal_Line_Description; "Description 3 ")
+                    column(Gen__Journal_Line_Description; Description)
                     {
                     }//#122
                     column(Gen__Journal_Line__Gen__Posting_Type_; "Gen. Posting Type")
@@ -1232,18 +1232,18 @@ report 50106 "Voucher Test Report"
                       StrSubstNo("Document No.", Day, Week, Month, MonthText, AccountingPeriod.Name),
                       MaxStrLen("Document No.")),
                     '>');
-                // Description :=
-                //   DelChr(
-                //     PadStr(
-                //       StrSubstNo(Description, Day, Week, Month, MonthText, AccountingPeriod.Name),
-                //       MaxStrLen(Description)),
-                //     '>');
-                "Description 3 " :=
-             DelChr(
-               PadStr(
-                 StrSubstNo("Description 3 ", Day, Week, Month, MonthText, AccountingPeriod.Name),
-                 MaxStrLen("Description 3 ")),
-               '>');//#122
+                Description :=
+                  DelChr(
+                    PadStr(
+                      StrSubstNo(Description, Day, Week, Month, MonthText, AccountingPeriod.Name),
+                      MaxStrLen(Description)),
+                    '>');
+                //     "Description 3 " :=
+                //  DelChr(
+                //    PadStr(
+                //      StrSubstNo("Description 3 ", Day, Week, Month, MonthText, AccountingPeriod.Name),
+                //      MaxStrLen("Description 3 ")),
+                //    '>');//#122
             end;
         end;
     end;

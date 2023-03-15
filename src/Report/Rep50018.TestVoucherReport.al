@@ -79,12 +79,12 @@ report 50018 "Test Voucher Report"
                 column(AccNameCaption; AccNameCaptionLbl)
                 {
                 }
-                // column(Gen__Journal_Line_DescriptionCaption; "Gen. Journal Line".FieldCaption(Description))
-                // {
-                // }
-                column(Gen__Journal_Line_DescriptionCaption; "Gen. Journal Line".FieldCaption("Description 3 "))
+                column(Gen__Journal_Line_DescriptionCaption; "Gen. Journal Line".FieldCaption(Description))
                 {
                 }
+                // column(Gen__Journal_Line_DescriptionCaption; "Gen. Journal Line".FieldCaption("Description 3 "))
+                // {
+                // }
                 column(Gen__Journal_Line__Gen__Posting_Type_Caption; Gen__Journal_Line__Gen__Posting_Type_CaptionLbl)
                 {
                 }
@@ -130,12 +130,12 @@ report 50018 "Test Voucher Report"
                     column(AccName; AccName)
                     {
                     }
-                    // column(Gen__Journal_Line_Description; Description)
-                    // {
-                    // }
-                    column(Gen__Journal_Line_Description; "Description 3 ")
+                    column(Gen__Journal_Line_Description; Description)
                     {
                     }
+                    // column(Gen__Journal_Line_Description; "Description 3 ")
+                    // {
+                    // }
                     column(Gen__Journal_Line__Gen__Posting_Type_; "Gen. Posting Type")
                     {
                     }
@@ -1289,18 +1289,18 @@ report 50018 "Test Voucher Report"
                       StrSubstNo("Document No.", Day, Week, Month, MonthText, AccountingPeriod.Name),
                       MaxStrLen("Document No.")),
                     '>');
-                // Description :=
-                //   DelChr(
-                //     PadStr(
-                //       StrSubstNo(Description, Day, Week, Month, MonthText, AccountingPeriod.Name),
-                //       MaxStrLen(Description)),
-                //     '>');
-                "Description 3 " :=
-                 DelChr(
-                   PadStr(
-                     StrSubstNo("Description 3 ", Day, Week, Month, MonthText, AccountingPeriod.Name),
-                     MaxStrLen("Description 3 ")),
-                   '>');
+                Description :=
+                  DelChr(
+                    PadStr(
+                      StrSubstNo(Description, Day, Week, Month, MonthText, AccountingPeriod.Name),
+                      MaxStrLen(Description)),
+                    '>');
+                // "Description 3 " :=
+                //  DelChr(
+                //    PadStr(
+                //      StrSubstNo("Description 3 ", Day, Week, Month, MonthText, AccountingPeriod.Name),
+                //      MaxStrLen("Description 3 ")),
+                //    '>');
             end;
         end;
     end;
