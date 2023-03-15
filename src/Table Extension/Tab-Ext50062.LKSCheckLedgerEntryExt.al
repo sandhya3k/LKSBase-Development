@@ -9,10 +9,10 @@ tableextension 50062 "LKSCheckLedgerEntryExt" extends "Check Ledger Entry"
             Caption = 'Cheque No.';
         }
         //<<#122
-        // field(50001; "Description 3 "; text[100])
-        // {
-        //     Caption = 'Description';
-        // }
+        field(50001; "Description 3 "; text[100])
+        {
+            Caption = 'Description';
+        }
         //#122>>
         // //<<#122
         // field(50002; "Description 3"; text[100])
