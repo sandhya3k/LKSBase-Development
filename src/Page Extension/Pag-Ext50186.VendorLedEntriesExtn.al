@@ -5,11 +5,11 @@ pageextension 50186 "Vendor Ledger EntriesExt" extends "Vendor Ledger Entries"
         // Add changes to page layout here
         addafter("Vendor No.")
         {
-            field("Description 3"; Rec."Description 3")
-            {
-                ApplicationArea = all;
-                caption = 'Description';
-            }
+            // field("Description 3"; Rec."Description 3")
+            // {
+            //     ApplicationArea = all;
+            //     caption = 'Description';
+            // }
         }
     }
 

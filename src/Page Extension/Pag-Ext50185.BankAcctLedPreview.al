@@ -3,17 +3,17 @@ pageextension 50185 "Bank Acc. Ldeger PreviewExt" extends "Bank Acc. Ledg. Entr.
     layout
     {
         // Add changes to page layout here
-        modify(Description)
-        {
-            Visible = false;
-        }
+        // modify(Description)
+        // {
+        //     Visible = false;
+        // }
         addafter("Bank Account No.")
         {
-            field("Description 3"; Rec."Description 3")
-            {
-                ApplicationArea = all;
-                caption = 'Description';
-            }
+            // field("Description 3"; Rec."Description 3")
+            // {
+            //     ApplicationArea = all;
+            //     caption = 'Description';
+            // }
             //>>#94
             field("Cheque No. 2"; Rec."Cheque No. 2")
             {
