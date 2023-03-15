@@ -58,11 +58,11 @@ pageextension 50104 pageextension50104 extends "Bank Account Ledger Entries"
         }
         addafter("Bank Account No.")
         {
-            field("Description 3"; Rec."Description 3")
-            {
-                Caption = 'Description';
-                ApplicationArea = All;
-            }
+            // field("Description 3"; Rec."Description 3")
+            // {
+            //     Caption = 'Description';
+            //     ApplicationArea = All;
+            // }
         }
         addafter("Entry No.")
         {

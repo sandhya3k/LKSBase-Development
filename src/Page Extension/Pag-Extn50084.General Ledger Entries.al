@@ -17,10 +17,10 @@ pageextension 50084 pageextension50084 extends "General Ledger Entries"
         }
         addafter("G/L Account No.")
         {
-            field("Description 3"; Rec."Description 3")
-            {
-                ApplicationArea = All;
-            }
+            // field("Description 3"; Rec."Description 3")
+            // {
+            //     ApplicationArea = All;
+            // }
 
         }
         addafter(Description)
