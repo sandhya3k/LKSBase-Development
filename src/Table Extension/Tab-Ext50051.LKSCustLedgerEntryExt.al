@@ -91,10 +91,10 @@ tableextension 50051 "LKSCustLedgerEntryExt" extends "Cust. Ledger Entry"
             TableRelation = "Dimension Set Entry"."Dimension Value Code" WHERE("Dimension Code" = CONST('OWNER2'));
         }
         //#122
-        field(50019; "Description 3"; Text[100])
-        {
-            Caption = 'Description';
-        }
+        // field(50019; "Description 3"; Text[100])
+        // {
+        //     Caption = 'Description';
+        // }
         //#122
     }
     keys

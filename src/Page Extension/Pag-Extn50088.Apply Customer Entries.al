@@ -10,19 +10,19 @@ pageextension 50088 pageextension50088 extends "Apply Customer Entries"
             }
         }
         //#122
-        modify(Description)
-        {
-            Visible = false;
-        }
+        // modify(Description)
+        // {
+        //     Visible = false;
+        // }
 
-        addafter("Customer No.")
-        {
-            field("Description 3"; Rec."Description 3")
-            {
-                Caption = 'Description';
-                ApplicationArea = all;
-            }
-        }
+        // addafter("Customer No.")
+        // {
+        //     field("Description 3"; Rec."Description 3")
+        //     {
+        //         Caption = 'Description';
+        //         ApplicationArea = all;
+        //     }
+        // }
         //#122
     }
     actions

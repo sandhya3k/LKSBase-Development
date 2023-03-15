@@ -35,10 +35,10 @@ tableextension 50061 "LKSBAnkAccntLedgerEntryExt" extends "Bank Account Ledger E
             Caption = 'Cheque No.';
         }
         //<<#122
-        field(50007; "Description 3"; text[100])
-        {
-            Caption = 'Description';
-        }
+        // field(50007; "Description 3"; text[100])
+        // {
+        //     Caption = 'Description';
+        // }
         //#122>>
     }
     keys
