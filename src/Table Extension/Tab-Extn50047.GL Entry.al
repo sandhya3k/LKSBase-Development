@@ -60,10 +60,10 @@ tableextension 50047 tableextension50047 extends "G/L Entry"
             DataClassification = ToBeClassified;
         }
         //#112
-        field(50018; "Description 3"; Text[100])
-        {
-            Caption = 'Description';
-        }
+        // field(50018; "Description 3"; Text[100])
+        // {
+        //     Caption = 'Description';
+        // }
         //#112
     }
 
