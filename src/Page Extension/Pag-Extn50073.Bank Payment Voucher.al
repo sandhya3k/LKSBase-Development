@@ -114,30 +114,30 @@ pageextension 50073 pageextension50073 extends "Bank Payment Voucher"
         }
         //TBD
         //#122
-        modify(Description)
-        {
-            Visible = false;
-            // trigger OnAfterValidate()
-            // var
-            //     GenJnlRec: Record "Gen. Journal Line";
+        // modify(Description)
+        // {
+        //     Visible = false;
+        //     // trigger OnAfterValidate()
+        //     // var
+        //     //     GenJnlRec: Record "Gen. Journal Line";
 
-            // begin
-            //     // rec.Validate("Description 3 ",de);
-            //     GenJnlRec.Validate("Description 3 ", Rec.Description);
+        //     // begin
+        //     //     // rec.Validate("Description 3 ",de);
+        //     //     GenJnlRec.Validate("Description 3 ", Rec.Description);
 
 
 
-            // end;
+        //     // end;
 
-        }
+        // }
 
         addafter("Currency Code")
         {
-            field("Description 3"; Rec."Description 3 ")
-            {
-                Caption = 'Description';
-                ApplicationArea = all;
-            }
+            // field("Description 3"; Rec."Description 3 ")
+            // {
+            //     Caption = 'Description';
+            //     ApplicationArea = all;
+            // }
             field("Ship-to Code"; Rec."Ship-to Code")
             {
                 ApplicationArea = all;

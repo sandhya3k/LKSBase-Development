@@ -12,34 +12,30 @@ pageextension 50068 pageextension50068 extends "Bank Receipt Voucher"
             Visible = false;
         }
         //#122
-        modify(Description)
-        {
-            Visible = false;
-            trigger OnBeforeValidate()
-            var
+        // modify(Description)
+        // {
+        //     Visible = false;
+        //     trigger OnBeforeValidate()
+        //     var
 
-            begin
-                GenJnl.Reset();
-                GenJnl.SetRange("Journal Template Name", rec."Journal Template Name");
-                GenJnl.SetRange("Journal Batch Name", rec."Journal Batch Name");
-                if GenJnl.FindFirst() then begin
-                    GenJnl.Validate("Description 3 ", Rec.Description);
-                    GenJnl.Modify();
-                end;
-
-
-
-
-            end;
-        }
+        //     begin
+        //         GenJnl.Reset();
+        //         GenJnl.SetRange("Journal Template Name", rec."Journal Template Name");
+        //         GenJnl.SetRange("Journal Batch Name", rec."Journal Batch Name");
+        //         if GenJnl.FindFirst() then begin
+        //             GenJnl.Validate("Description 3 ", Rec.Description);
+        //             GenJnl.Modify();
+        //         end;
+        //     end;
+        // }
 
         addafter("Account Name")
         {
-            field("Description 3"; Rec."Description 3 ")
-            {
-                ApplicationArea = all;
-                caption = 'Description';
-            }
+            // field("Description 3"; Rec."Description 3 ")
+            // {
+            //     ApplicationArea = all;
+            //     caption = 'Description';
+            // }
             field("GST Customer Type"; Rec."GST Customer Type")
             {
                 ApplicationArea = all;
