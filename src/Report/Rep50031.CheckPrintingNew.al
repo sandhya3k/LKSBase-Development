@@ -12,7 +12,7 @@ report 50031 "Check Printing New"
         dataitem(GenJnlLine; "Gen. Journal Line")
         {
             RequestFilterFields = "Journal Template Name", "Journal Batch Name", "Posting Date", "Document No.";
-            column(CheckDateText; Format("Posting Date"))
+            column(CheckDateText; Format("Posting Date", 0, '<day,2>-<month,2>-<year4>'))
             {
             }
             column(DescriptionLine_1_; txtAmnt1[1])
@@ -156,6 +156,7 @@ report 50031 "Check Printing New"
                 //repCheck.FormatNoText(txtAmnt1,Amount,'');
                 // repCheck. FormatNoText(txtAmnt1, Amnt4, '');
                 FormatNoText(txtAmnt1, Amnt4, '');
+                //Format(GenJnlLine."Posting Date", 0, '<day,2> <month,2> <year4>');
 
                 //TEAM::1426
                 if Self = false then begin
